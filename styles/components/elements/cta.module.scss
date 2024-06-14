@@ -65,3 +65,97 @@
         background: var(--secondary-color);
     }
 }
+
+.sec_container{
+    width: 100%;
+    height: auto;
+    min-height: 5.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    background: var(--text-white);
+    position: relative;
+    overflow: hidden;
+    
+    .sec_content_container{
+        width: 100%;
+        height: auto;
+        padding-block: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    
+        &.avail{
+            background: var(--text-white);
+            position: relative;
+            
+            .content{
+                font-size: var(--paragraph-lg);
+                font-weight: 700;
+                color: var(--text-black);
+                position: relative;
+                z-index: 3;
+                transition: all .6s linear;
+            }
+    
+            &::after{
+                content: "";
+                display: block;
+                width: inherit;
+                height: 5.4rem;
+                background: var(--tertier-color);
+                position: absolute;
+                transform-origin: bottom;
+                transform: scaleY(0);
+                transition: transform .3s linear;
+            }
+    
+            &:hover{
+                .content{
+                    color: var(--text-white);
+                }
+    
+                &::after{
+                    transform: scaleY(1);
+                }
+            }
+        }
+        &.full{
+            background: var(--text-white);
+            position: relative;
+            
+            .content{
+                font-size: var(--paragraph-lg);
+                font-weight: 700;
+                color: var(--text-black);
+                position: relative;
+                z-index: 3;
+                transition: all .6s linear;
+            }
+    
+            &::after{
+                content: "";
+                display: block;
+                width: inherit;
+                height: 5.4rem;
+                background: var(--danger);
+                position: absolute;
+                transform-origin: bottom;
+                transform: scaleY(0);
+                transition: transform .3s linear;
+            }
+    
+            &:hover{
+                .content{
+                    color: var(--text-white);
+                }
+    
+                &::after{
+                    transform: scaleY(1);
+                }
+            }
+        }
+    }
+}
