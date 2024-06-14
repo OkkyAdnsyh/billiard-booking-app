@@ -1,0 +1,35 @@
+.container{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+}
+.z-index_1{
+    z-index: 1;
+}
+.z-index_2{
+    z-index: 2;
+}
+.img_bg{
+    img{
+        width: inherit;
+        height: inherit;
+        object-fit: cover;
+    }
+}
+.gradient_bg{
+    &.top_to_bottom{
+        background: var(--TtB-gradient);
+    }
+    &.left_to_right{
+        background: var(--LtR-gradient);
+    }
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-bottom: 15.6rem;
+    padding-inline: 12.4rem;
+}
