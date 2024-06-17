@@ -13,8 +13,20 @@
     &.avail{
         color: var(--success);
     }
-    &.full__book{
+    &.full{
         color: var(--danger);
+    }
+}
+.status_single{
+    width: 100%;
+    padding-inline: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label{
+        color: var(--text-dark);
+        font-weight: 400;
     }
 }
 .label{

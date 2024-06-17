@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    height: auto;
+    background: #CFE7FF;
+}
+.type_product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.head{
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.4rem;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-black);
+    letter-spacing: 3px;
+    text-align: center;
+}
+.body{
+    width: 100%;
+    display: flex;
+
+    &.product{
+        flex-direction: column;
+    }
+}

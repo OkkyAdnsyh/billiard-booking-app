@@ -25,7 +25,7 @@ const Table = () => {
                         <article className={styles['product_body']}>
                             <h3 className={styles['product_title']}>reguler table</h3>
                             <p className={styles['product_desc']}>Reguler playing table best for beginner and professional</p>
-                            <ProductComponent.ProductStatus status={true} />
+                            <ProductComponent.ProductStatus type='Group' status={true} />
                             <section className={styles['product_footer']}>
                                 <ProductComponent.ProductPrice nominal={35000} qty='hour' label='Price' />
                                 <CTA type='Secondary' href={'/product/table'} status={true} />
@@ -44,7 +44,7 @@ const Table = () => {
                         <article className={styles['product_body']}>
                             <h3 className={styles['product_title']}>VIP room</h3>
                             <p className={styles['product_desc']}>Private room to play with your friend and family</p>
-                            <ProductComponent.ProductStatus status={true} />
+                            <ProductComponent.ProductStatus type='Group' status={true} />
                             <section className={styles['product_footer']}>
                                 <ProductComponent.ProductPrice nominal={55000} qty='hour' label='Price' />
                                 <CTA type='Secondary' href={'/product/table'} status={true} />
@@ -55,7 +55,7 @@ const Table = () => {
                 <section className={`${styles.product} ${styles['content_center']}`}>
                     <h3 className={styles['product_title']}>VIP room</h3>
                     <p className={styles['product_desc']}>Private room to play with your friend and family</p>
-                    <ProductComponent.ProductStatus status={true} />
+                    <ProductComponent.ProductStatus type='Group' status={true} />
                     <section className={styles['product_footer']}>
                         <ProductComponent.ProductPrice nominal={55000} qty='hour' label='Price' />
                         <CTA type='Secondary' href={'/product/table'} status={true} />
