@@ -4,8 +4,10 @@ import { Product } from "@/components/blocks/Product/Product";
 export default function Home() {
   return (
     <>
-      <Banner />
-      <Product.Table />
+      <div className="wrapper">
+        <Banner />
+        <Product.Table />
+      </div>
     </>
   );
 }
