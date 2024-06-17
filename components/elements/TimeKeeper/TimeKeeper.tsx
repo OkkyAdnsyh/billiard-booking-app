@@ -12,7 +12,7 @@ type TTimeKeeper = {
 export const TimeKeeper = ({label, timerType, time} : TTimeKeeper) => {
   return (
     <section className={styles.container}>
-        <p className={styles.label}>{label}</p>
+        <p className={styles.label}>{label}</p>  
         {timerType === 'Timer' && <Timer time={time as string} />}
     </section>
   )
