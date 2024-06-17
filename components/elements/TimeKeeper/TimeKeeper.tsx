@@ -4,16 +4,19 @@ import Timer from './Timer/Timer';
 
 type TTimeKeeper = {
     timerType: 'Timer' | 'Stopwatch',
-    time?: string,
-    orderID?: string | null,
-    label: string
+    time: string | null,
+    orderID: string | null,
+    label: string,
 }
 
-export const TimeKeeper = ({label, timerType, time} : TTimeKeeper) => {
+export const TimeKeeper = ({label, timerType, time, orderID} : TTimeKeeper) => {
   return (
     <section className={styles.container}>
-        <p className={styles.label}>{label}</p>  
-        {timerType === 'Timer' && <Timer time={time as string} />}
+        <p className={styles.label}>{label}</p>
+        <section className={styles['timer_container']}>
+          <p className={styles['order_id']}>{orderID}</p>
+          {timerType === 'Timer' && <Timer time={time} />}
+        </section>
     </section>
   )
 }
