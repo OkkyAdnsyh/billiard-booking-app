@@ -21,7 +21,7 @@ const ProductCard = ({product, type, title, status} : TProductCard) => {
             </CardComponent.CardHead>
             <CardComponent.CardBody type={type}>
                 <ProductComponent.ProductStatus type='Single' productType='Table' status={status} />
-                <TimeKeeper timerType='Timer' time={3600} label='is playing'/>
+                <TimeKeeper timerType='Timer' time={'6:27:14'} label='is playing'/>
             </CardComponent.CardBody>
         </Card>
     )

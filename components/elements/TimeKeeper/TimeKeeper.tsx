@@ -4,7 +4,7 @@ import Timer from './Timer/Timer';
 
 type TTimeKeeper = {
     timerType: 'Timer' | 'Stopwatch',
-    time?: number,
+    time?: string,
     orderID?: string | null,
     label: string
 }
@@ -13,7 +13,7 @@ export const TimeKeeper = ({label, timerType, time} : TTimeKeeper) => {
   return (
     <section className={styles.container}>
         <p className={styles.label}>{label}</p>
-        {timerType === 'Timer' && <Timer time={time as number} />}
+        {timerType === 'Timer' && <Timer time={time as string} />}
     </section>
   )
 }

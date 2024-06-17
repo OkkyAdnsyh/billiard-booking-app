@@ -5,7 +5,7 @@ import styles from '@/styles/components/elements/timeKeeper.module.scss';
 import useTimer from '@/utils/customHook/useTimer';
 
 
-const Timer = ({time} : {time : number}) => {
+const Timer = ({time} : {time : string}) => {
   const {hour, minute, second} = useTimer(time);
 
   return (

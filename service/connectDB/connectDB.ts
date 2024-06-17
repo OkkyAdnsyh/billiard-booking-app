@@ -6,11 +6,7 @@ const clientOptions = { serverApi: { version: '1', strict: true, deprecationErro
 export async function connect() {
     try{
         await mongoose.connect(uri);
-
-        console.log('connect');
     }catch(err){
         console.log(err);
-    }finally{
-        await mongoose.disconnect();
     }
 }
