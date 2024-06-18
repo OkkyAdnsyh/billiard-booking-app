@@ -1,38 +1,52 @@
-'use client'
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react";
 
-const useTimer = (time : string) => {
+interface ITimeDiff {
+    hourDiff: number | null,
+    minuteDiff: number | null,
+    secondDiff: number | null
+}
+
+const usePlayTimer = (time : string | null) => {
     const [hour, setHour] = useState<number | null>(null);
     const [minute, setMinute] = useState<number | null>(null);
     const [second, setSecond] = useState<number | null>(null);
-    // get all time references
-    const timeRef : number[] = time.split(':').map(time => parseInt(time));
-    const date : Date = new Date();
-    const currentHour: number = parseInt(date.getHours().toLocaleString());
-    const currentMinute: number = parseInt(date.getMinutes().toLocaleString());
-    const currentSecond:number = parseInt(date.getSeconds().toLocaleString());
 
-    let secondDiff: number;
-    let minuteDiff: number;
+    const date: Date = new Date();
+    let currentDate = date.getDate();
+    let currentMonth = date.getMonth() + 1;
+    let currentYear = date.getFullYear()
+    let currentHour = date.getHours();
+    let currentMinute = date.getMinutes();
+    let currentSecond = date.getSeconds();
+
     let hourDiff: number;
-    // count time differences with current time
-    secondDiff = (60 - currentSecond) + timeRef[2];
-    if(secondDiff === 60 || secondDiff === 0){
-        minuteDiff = timeRef[1] - currentMinute;
-    }else{
-        minuteDiff = (timeRef[1] - currentMinute) - 1;
-    }
-    if(minuteDiff === 60 || minuteDiff === 0){
-        hourDiff = timeRef[0] - currentHour - 1;
-    }else{
-        hourDiff = timeRef[0] - currentHour;
+    let minuteDiff: number;
+    let secondDiff: number;
+
+    // function to get time diff
+    const getTimeDiff = () => {
+        let currFullDateAndTime = `${currentMonth}/${currentDate}/${currentYear} ${currentHour}:${currentMinute}:${currentSecond}`;
+
+        let endDate = new Date(time as string);
+        let startDate = new Date(currFullDateAndTime);
+        let timeDiff = endDate.getTime() - startDate.getTime();
+
+        hourDiff = Math.abs(Math.floor(timeDiff / 1000 / 60 / 60) % 24);
+        minuteDiff = Math.abs(Math.floor(timeDiff / 1000 / 60) % 60);
+        secondDiff = Math.abs(Math.floor(timeDiff / 1000) % 60);
     }
 
-    console.log(hourDiff, minuteDiff, secondDiff);
-
+    if(time !== null){
+        getTimeDiff();
+    }
     useEffect(() => {
         let interval: NodeJS.Timeout | null = null; 
 
+        if(time === null){
+            setHour(0);
+            setMinute(0);
+            setSecond(0);
+        }
         if(second === null || hour === null || minute === null){
             setHour(hourDiff);
             setMinute(minuteDiff);
@@ -79,9 +93,7 @@ const useTimer = (time : string) => {
 
     }, [minute, second]);
 
-    console.log(timeRef)
-
     return {hour, minute, second}
 }
 
-export default useTimer;
+export default usePlayTimer;

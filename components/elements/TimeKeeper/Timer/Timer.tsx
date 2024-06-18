@@ -2,11 +2,11 @@
 
 import React from 'react';
 import styles from '@/styles/components/elements/timeKeeper.module.scss';
-import useTimer from '@/utils/customHook/useTimer';
+import usePlayTimer from '@/utils/customHook/usePlayTimer';
 
 
-const Timer = ({time} : {time : string}) => {
-  const {hour, minute, second} = useTimer(time);
+const Timer = ({time} : {time : string | null}) => {
+  const {hour, minute, second} = usePlayTimer(time);
 
   return (
     <section className={styles['timer_container']}>

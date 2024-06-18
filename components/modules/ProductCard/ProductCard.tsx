@@ -2,7 +2,6 @@ import { Assets } from '@/components/elements/Assets/Assets'
 import { Card, CardComponent } from '@/components/elements/Card/Card'
 import { ProductComponent } from '@/components/elements/Product/Product'
 import { TimeKeeper } from '@/components/elements/TimeKeeper/TimeKeeper'
-import Timer from '@/components/elements/TimeKeeper/Timer/Timer'
 import React from 'react'
 
 type TProductCard = {
@@ -21,7 +20,7 @@ const ProductCard = ({product, type, title, status} : TProductCard) => {
             </CardComponent.CardHead>
             <CardComponent.CardBody type={type}>
                 <ProductComponent.ProductStatus type='Single' productType='Table' status={status} />
-                <TimeKeeper timerType='Timer' time={'22:27:14'} label='is playing'/>
+                <TimeKeeper orderID='29' timerType='Timer' time={'07/18/2024 01:30:14'} label='is playing'/>
             </CardComponent.CardBody>
         </Card>
     )
