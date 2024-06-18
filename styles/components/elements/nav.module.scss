@@ -1,10 +1,15 @@
 .wrapper{
     width: 100%;
-    padding: 1.2rem 2.4rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     border-bottom: solid 3px rgba($color: #007FFF, $alpha: .5);
+}
+.main_nav{
+    justify-content: flex-end;
+}
+.sec_nav{
+    width: 100%;
+    justify-content: space-between;
 }
 .container{
     display: flex;
