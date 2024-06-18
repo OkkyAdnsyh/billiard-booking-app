@@ -1,8 +1,20 @@
-import React from 'react'
+import React from 'react';
+import styles from '@/styles/components/elements/timeKeeper.module.scss';
 
-const Second = () => {
+const Second = ({second} : {second: number}) => {
+    
+  let formattedTime: number;
+  let paddedMinute: string;
+
+  if(second === 60){
+    formattedTime = 0;
+  }else{
+    formattedTime = second as number;
+  }
+  
+  paddedMinute = formattedTime?.toString().padStart(2, '0');
   return (
-    <div>Second</div>
+    <p className={styles['time_indicator']}>{formattedTime < 10 ? paddedMinute : formattedTime}</p>
   )
 }
 

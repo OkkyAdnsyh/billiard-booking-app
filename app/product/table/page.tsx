@@ -10,7 +10,7 @@ const ProductTable = async () => {
   
   return (
     <>
-      <ProductCard product='Table' type='Product' title='Table 1' status={false} />
+      <ProductCard product='Table' type='Product' title='Table 1' status={true} />
     </>
   )
 }
