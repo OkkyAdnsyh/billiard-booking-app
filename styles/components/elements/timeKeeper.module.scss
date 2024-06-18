@@ -1,4 +1,44 @@
-.button{
-    padding: 2.4rem;
-    background: var(--primary-color);
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+
+.label{
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.time_container{
+    margin-top: 1.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+    background: #004B97;
+}
+
+.order_id{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: var(--text-white);
+}
+
+.timer_container{
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    font-size: 1.8rem;
+    color: var(--text-white);
+    font-variant-numeric: tabular-nums;
+}
+
+.time_indicator{
+    font-variant-numeric: tabular-nums;
+    min-width: 2rem;
+    text-align: center;
 }
