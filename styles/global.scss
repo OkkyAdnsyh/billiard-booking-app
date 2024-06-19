@@ -58,7 +58,8 @@
 :root{
     --text-white : #F1F8FF;
     --text-black : #000912;
-    --primary-color : #042A50;
+    --primary-color : #F3F9FF;
+    --primary-shade-color : #E5F2FF;
     --secondary-color : #EC3737;
     --tertier-color : #007FFF;
 
@@ -95,7 +96,7 @@ body,
 }
 html,
 body{
-    background: var(--text-white);
+    background: var(--primary-color);
 }
 
 a{

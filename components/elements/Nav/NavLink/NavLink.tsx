@@ -2,7 +2,7 @@
 
 import Link, { LinkProps } from 'next/link';
 import React, { useState } from 'react';
-import styles from '@/styles/components/elements/nav.module.scss';
+import styles from '@/styles/components/elements/navElement.module.scss';
 
 interface INavLink extends LinkProps{
     children : React.ReactNode,
