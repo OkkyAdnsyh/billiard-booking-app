@@ -1,12 +1,19 @@
 import Modal from '@/components/blocks/Modal/Modal';
-import OrderModal from '@/components/modules/Order/OrderModal';
+import Summary from '@/components/modules/Order/Summary';
 import React from 'react';
 
 const ModalOrderPage = () => {
   return (
     <>
       <Modal>
-        <OrderModal />
+        <Summary 
+          type='Modal' 
+          tableType='Reguler' 
+          orderID={'#234213'} 
+          onWaiting={true}
+          onQueued={false}
+          isOpen={false}
+        />
       </Modal>
     </>
   )

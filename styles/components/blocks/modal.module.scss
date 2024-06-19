@@ -11,18 +11,3 @@
     justify-content: flex-end;
     z-index: 4;
 }
-.container{
-    width: 50%;
-    height: auto;
-    min-height: 100vh;
-    background: var(--text-white);
-    padding-top: 4.8rem;
-    padding-inline: 12.4rem;
-    transition: transform .6s linear;
-}
-.isClosed{
-    transform: translateX(100%);
-}
-.isOpen{
-    transform: translateX(0);
-}

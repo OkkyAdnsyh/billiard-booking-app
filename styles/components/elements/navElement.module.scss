@@ -1,0 +1,19 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: solid 3px rgba($color: #007FFF, $alpha: .5);
+    padding-block: 2.4rem;
+}
+.navLink_group{
+    display: flex;
+    align-items: center;
+}
+.navLink_group_right{
+    margin-left: auto;
+    column-gap: 3.2rem;
+}
+.navLink_group_spacing{
+    width: 100%;
+    justify-content: space-between;
+}

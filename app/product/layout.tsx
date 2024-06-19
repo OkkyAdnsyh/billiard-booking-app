@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from '@/styles/productPage.module.scss';
-import ProductNav from '@/components/modules/Nav/ProductNav';
+import Nav from '@/components/modules/Nav/Nav';
 
 const ProductLayout = ({children, OrderModal} : {children: React.ReactNode, OrderModal: React.ReactNode}) => {
   return (
     <>
       <main className={`wrapper ${styles.container}`}>
-        <ProductNav/>
+        <Nav/>
         <section className={styles['card_container']}>
           {children}
         </section>
