@@ -1,0 +1,22 @@
+.container{
+    width: 50%;
+    height: auto;
+    min-height: 100vh;
+    background: var(--text-white);
+    padding-top: 1.2rem;
+    padding-inline: 6.2rem;
+    transition: transform .6s linear;
+}
+.isClosed{
+    transform: translateX(100%);
+}
+.isOpen{
+    transform: translateX(0);
+}
+.item_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+    margin-top: 1.2rem;
+}

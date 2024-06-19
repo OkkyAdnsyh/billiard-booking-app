@@ -17,17 +17,19 @@ const NavLink = ({children, tooltip, ...rest} : INavLink) => {
         setHoverState(!isHover);
     }
   return (
-    <Link
-        {...rest}
-        className={styles['link_container']}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-    >
-        {children}
-        <p className={`${styles['link_tooltip']} ${isHover ? styles.isShow : ''}`}>
-            {tooltip}
-        </p>
-    </Link>
+    <li>
+        <Link
+            {...rest}
+            className={styles['link_container']}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            {children}
+            <p className={`${styles['link_tooltip']} ${isHover ? styles.isShow : ''}`}>
+                {tooltip}
+            </p>
+        </Link>
+    </li>
   )
 }
 
