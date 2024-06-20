@@ -9,3 +9,7 @@ export interface IProductTable {
     createdAt: Date,
     updatedAt: Date
 }
+
+export interface IPoolTable{
+    
+}
