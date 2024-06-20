@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '@/styles/components/elements/timeKeeper.module.scss';
-import Timer from './Timer/Timer';
 
 type TTimeKeeper = {
     playerID: string | null,
