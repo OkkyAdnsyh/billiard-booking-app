@@ -1,26 +1,33 @@
-import PoolTableCard from '@/components/modules/Card/Product/PoolTableCard'
-import { getTimeDiff } from '@/utils/helper/GetTimeDiff'
-import { time } from 'console';
-import React from 'react'
+import React from 'react';
+import PoolTableCard from '@/components/modules/Card/Product/PoolTableCard';
+import { getTimeDiff } from '@/utils/helper/GetTimeDiff';
+import { TPoolTableCard } from '@/lib/Type/type';
 
 const PoolTablePage = async () => {
-  // const res = await fetch('http://localhost:3000/api/v1/product/table', {
-  //   method: 'POST'
-  // }).then(res => res.json())
+  const res = await fetch('http://localhost:3000/api/v1/product/pool-table', {
+    method: 'GET',
+    cache: 'no-cache'
+  }).then(res => res.json())
 
-  // console.log(res);
+  console.log(res);
+
   let timeDiff = getTimeDiff('06/20/2024 18:05:00');
   return (
     <>
-      <PoolTableCard 
-        tableNumber={1}
-        productType='Reguler Table'
-        isOpenTable={false}
-        isOccupied={false}
-        timeCount={timeDiff}
-        playerID={null}
-        bookingID={null}
-      />
+      {res.map((item: TPoolTableCard, index: number) => {
+        return(
+          <PoolTableCard
+            key={`table-${index}`}
+            tableNumber={index + 1}
+            isOpenTable={item.playerID === null ? false : true}
+            isOccupied={item.playerID === null ? false : true}
+            bookingID={item.bookingID}
+            playerID={item.playerID}
+            productType={item.productType}
+            timeCount={null}
+          />
+        )
+      })}
     </>
   )
 }
