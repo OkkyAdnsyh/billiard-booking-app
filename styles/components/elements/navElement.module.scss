@@ -2,8 +2,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    border-bottom: solid 3px rgba($color: #007FFF, $alpha: .5);
-    padding-block: 2.4rem;
+    padding-block: 1.2rem;
 }
 .navLink_group{
     display: flex;
@@ -11,9 +10,50 @@
 }
 .navLink_group_right{
     margin-left: auto;
-    column-gap: 3.2rem;
+    column-gap: 2.4rem;
 }
 .navLink_group_spacing{
     width: 100%;
     justify-content: space-between;
+}
+.link_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+.link_tooltip{
+    display: none;
+    // width: fit-content;
+    // display: none;
+    // background: rgba($color: #007FFF, $alpha: .9);
+    // color: var(--text-black);
+    // font-size: 1.4rem;
+    // letter-spacing: 1px;
+    // white-space: nowrap;
+    // font-weight: 500;
+    // position: absolute;
+    // padding: 1.2rem 2.4rem;
+    // bottom: -4rem;
+    // left: 1rem;
+    // border-radius: .4rem;
+
+    // &.isShow{
+    //     display: block;
+    // }
+
+    // &::after{
+    //     content: "";
+    //     display: block;
+    //     position: absolute;
+    //     z-index: 2;
+    //     width: 0;
+    //     height: 0;
+    //     top: -1rem;
+    //     left: 1rem;
+    //     border-bottom: 10px solid var(--tertier-color);
+    //     border-inline: 10px solid transparent;
+    // }
 }

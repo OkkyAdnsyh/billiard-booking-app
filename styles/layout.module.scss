@@ -1,0 +1,15 @@
+.main{
+    width: 100%;
+    display: flex;
+    padding-top: 2.4rem;
+    padding-inline: 3.2rem;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+.card_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 4rem 3.8rem;
+}

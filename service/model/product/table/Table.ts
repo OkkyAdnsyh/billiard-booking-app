@@ -7,8 +7,14 @@ const tableSchema = new Schema<IProductTable>({
     tableType: String,
     hourlyPrice: Number,
     coachPrice: Number,
-    isPlaying: mongoose.SchemaTypes.ObjectId,
-    onQueued: mongoose.SchemaTypes.ObjectId,
+    isPlaying: {
+        type: mongoose.SchemaTypes.ObjectId,
+        default: null
+    },
+    onQueued: {
+        type: mongoose.SchemaTypes.ObjectId,
+        default: null
+    },
     createdAt: {
         type: Date,
         immutable: true,

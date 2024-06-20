@@ -1,0 +1,40 @@
+.type{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: rgba($color: #12171D, $alpha: .7);
+    letter-spacing: 1px;
+}
+.tag{
+    font-size: 1.4rem;
+    padding: 1.2rem;
+    background: var(--secondary-color);
+    font-weight: 700;
+    color: var(--text-white);
+    letter-spacing: 1px;
+    opacity: .7;
+}
+.single_table_status_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label{
+        font-size: var(--paragraph-md);
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-black);
+    }
+    .status{
+        font-size: var(--paragraph-md);
+        font-weight: 700;
+        letter-spacing: 1px;
+    
+        &.avail{
+            color: var(--success);
+        }
+        &.full{
+            color: var(--danger);
+        }
+    }
+}

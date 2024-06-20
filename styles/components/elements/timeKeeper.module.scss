@@ -2,30 +2,33 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 1.2rem;
+    align-items: flex-start;
+    row-gap: 1.2rem;
 }
 
 .label{
-    font-size: 1.8rem;
-    letter-spacing: 3px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-white);
+    letter-spacing: 1px;
     text-transform: capitalize;
+    background: var(--secondary-color);
+    padding: .8rem 1.2rem;
 }
 
 .time_container{
-    margin-top: 1.2rem;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 1.2rem;
-    background: #004B97;
+    padding-inline: 1.2rem;
 }
 
 .order_id{
     font-size: 1.8rem;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: var(--text-white);
+    color: var(--text-black);
 }
 
 .timer_container{

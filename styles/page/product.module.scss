@@ -1,0 +1,16 @@
+.container{
+    width: 100%;
+    padding: 1.6rem 3.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_container{
+    width: 100%;
+    height: auto;
+    margin-top: 3.6rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+}

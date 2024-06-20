@@ -4,8 +4,8 @@ export interface IProductTable {
     tableType: string,
     hourlyPrice: number,
     coachPrice: number,
-    isPlaying: Types.ObjectId,
-    onQueued: Types.ObjectId,
+    isPlaying: Types.ObjectId | null,
+    onQueued: Types.ObjectId | null,
     createdAt: Date,
     updatedAt: Date
 }

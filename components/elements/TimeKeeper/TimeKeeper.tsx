@@ -3,19 +3,18 @@ import styles from '@/styles/components/elements/timeKeeper.module.scss';
 import Timer from './Timer/Timer';
 
 type TTimeKeeper = {
-    timerType: 'Timer' | 'Stopwatch',
-    time: string | null,
-    orderID: string | null,
+    playerID: string | null,
     label: string,
+    children: React.ReactNode
 }
 
-export const TimeKeeper = ({label, timerType, time, orderID} : TTimeKeeper) => {
+export const TimeKeeper = ({playerID, label, children} : TTimeKeeper) => {
   return (
     <section className={styles.container}>
         <p className={styles.label}>{label}</p>
         <section className={styles['time_container']}>
-          <p className={styles['order_id']}>{orderID === null ? 'none' : orderID}</p>
-          {timerType === 'Timer' && <Timer time={time} />}
+          <p className={styles['order_id']}>{playerID === null ? 'None' : playerID}</p>
+          {children}
         </section>
     </section>
   )
