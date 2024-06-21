@@ -26,6 +26,6 @@ const tableSchema = new Schema<IProductTable>({
     }    
 })
 
-const Table = model<IProductTable>('Table', tableSchema);
+const Table = mongoose.models.Table || model<IProductTable>('Table', tableSchema);
 
 export default Table
