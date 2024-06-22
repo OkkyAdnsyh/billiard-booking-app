@@ -1,20 +1,13 @@
 'use client';
 import React, { HTMLProps, useState } from 'react';
 import styles from '@/styles/components/elements/input.module.scss';
+import { IInput } from '@/lib/Interface/interface';
 
-interface IInput extends HTMLProps<HTMLInputElement>{
-    inputLabel: string
-}
-const Input = ({inputLabel, name, ...rest} : IInput) => {
-    const [value, setValue] = useState<string|null>(null);
-
-    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(value => e.target.value);
-    }
+const Input = ({label, name, onChange, value, ...rest} : IInput) => {
   return (
     <section className={styles.container}>
-        <label htmlFor={name} className={styles.label}>{inputLabel}</label>
-        <input className={styles['input_container']} name={name} id={name} value={value === null ? undefined : value as string} onChange={handleOnChange} {...rest} />
+        <label htmlFor={name} className={styles.label}>{label}</label>
+        <input className={styles['input_container']} name={name} id={name} value={value} onChange={onChange} {...rest} />
     </section>
   )
 }

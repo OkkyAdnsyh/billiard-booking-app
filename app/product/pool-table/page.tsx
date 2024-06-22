@@ -4,17 +4,16 @@ import { getTimeDiff } from '@/utils/helper/GetTimeDiff';
 import { TPoolTableCard } from '@/lib/Type/type';
 
 const PoolTablePage = async () => {
-  const res = await fetch('http://localhost:3000/api/v1/product/pool-table', {
-    method: 'GET',
-    cache: 'no-cache'
-  }).then(res => res.json())
+  // const res = await fetch('http://localhost:3000/api/v1/product/table', {
+  //   method: 'POST'
+  // }).then(res => res.json())
 
-  console.log(res);
+  // console.log(res);
 
   let timeDiff = getTimeDiff('06/20/2024 18:05:00');
   return (
     <>
-      {res.map((item: TPoolTableCard, index: number) => {
+      {/* {res.map((item: TPoolTableCard, index: number) => {
         return(
           <PoolTableCard
             key={`table-${index}`}
@@ -27,7 +26,7 @@ const PoolTablePage = async () => {
             timeCount={null}
           />
         )
-      })}
+      })} */}
     </>
   )
 }

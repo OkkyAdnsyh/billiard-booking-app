@@ -1,3 +1,3 @@
-import CreateBookForm from "./CreateBookForm/CreateBookForm";
+import BookingForm from "./BookingForm/BookingForm";
 
-export const FormControl = {CreateBookForm}
+export const FormControl = {BookingForm}

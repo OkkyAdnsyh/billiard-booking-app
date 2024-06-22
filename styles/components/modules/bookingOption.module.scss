@@ -1,0 +1,13 @@
+.container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 2.4rem;
+}
+.separator{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--text-black)
+}

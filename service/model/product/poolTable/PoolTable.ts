@@ -1,10 +1,14 @@
-import { IProductTable } from "@/lib/Interface/interface";
+import { IPoolTable } from "@/lib/Interface/interface";
 import mongoose from "mongoose";
 
 const {Schema, model} = mongoose;
 
-const tableSchema = new Schema<IProductTable>({
-    tableType: String,
+const poolTableSchema = new Schema<IPoolTable>({
+    tableType: {
+        type: String,
+        enum: ['Reguler Table', 'VIP Room']
+    },
+    tableNumber: Number,
     hourlyPrice: Number,
     coachPrice: Number,
     isPlaying: {
@@ -17,15 +21,14 @@ const tableSchema = new Schema<IProductTable>({
     },
     createdAt: {
         type: Date,
-        immutable: true,
         default: () => Date.now()
     },
     updatedAt: {
         type: Date,
         default: () => Date.now()
-    }    
+    }
 })
 
-const Table = mongoose.models.Table || model<IProductTable>('Table', tableSchema);
+const PoolTable = mongoose.models.PoolTable || model<IPoolTable>('PoolTable', poolTableSchema);
 
-export default Table
+export default PoolTable;

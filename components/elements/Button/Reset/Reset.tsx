@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 import styles from '@/styles/components/elements/button.module.scss';
 
-const Reset = ({content} : {content: string}) => {
+interface IReset extends HTMLProps<HTMLButtonElement>{
+  content: string
+}
+const Reset = ({content, type, ...rest} : IReset) => {
   return (
-    <button type='reset' className={styles.reset}>{content}</button>
+    <button type="reset" className={styles.reset} {...rest}>{content}</button>
   )
 }
 

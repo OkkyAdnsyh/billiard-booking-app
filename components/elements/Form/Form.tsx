@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { HTMLProps } from 'react';
 import styles from '@/styles/components/elements/form.module.scss';
 
-const Form = ({children} : {children: React.ReactNode}) => {
+interface IForm extends HTMLProps<HTMLFormElement>{
+  children: React.ReactNode
+}
+const Form = ({children, ...rest}: IForm) => {
   return (
-    <form className={styles.container}>
+    <form className={styles.wrapper} {...rest}>
         {children}
     </form>
   )
