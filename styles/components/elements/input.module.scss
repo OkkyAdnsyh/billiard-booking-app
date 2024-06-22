@@ -1,0 +1,30 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 1.2rem;
+}
+.label{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--text-black);
+    text-transform: capitalize;
+}
+.input_container{
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    background: rgba($color: #3390EE, $alpha: .21);
+    border-radius: .6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-black);
+    letter-spacing: 1px;
+
+    &::placeholder{
+        font: inherit;
+        letter-spacing: 1px;
+        color: rgba($color: #000912, $alpha: 0.4);
+    }
+}

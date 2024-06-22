@@ -11,5 +11,12 @@ export interface IProductTable {
 }
 
 export interface IPoolTable{
-    
+    type: string,
+    hourlyPrice: number,
+    coachPrice: number,
+    isPlaying: Types.ObjectId | null,
+    onQueued: Types.ObjectId | null,
+    package: Types.ObjectId[],
+    createdAt: Date,
+    updatedAt: Date
 }
