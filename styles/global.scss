@@ -129,7 +129,8 @@ button,
 input,
 input::placeholder,
 select,
-option{
+option,
+label{
     font-family: var(--primary-font);
 }
 

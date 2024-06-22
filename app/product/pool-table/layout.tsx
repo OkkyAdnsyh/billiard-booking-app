@@ -9,7 +9,7 @@ const PoolTableLayout = ({children} : {children: React.ReactNode}) => {
   return (
     <>
         <main className={`wrapper ${styles.main}`}>
-            <Nav type='Page' href={bookingID === undefined ? '/pool-table/create-book' : '/pool-table/book-status'} />
+            <Nav type='Page' href={bookingID === undefined ? '/table-book/create-booking' : '/table-book/booking-status'} />
             <section className={styles['card_container']}>
                 {children}
             </section>

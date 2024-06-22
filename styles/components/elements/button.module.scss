@@ -6,3 +6,20 @@
     justify-content: center;
     cursor: pointer;
 }
+.submit{
+    padding: 2rem 2.4rem;
+    background: var(--secondary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-white);
+}
+.reset{
+    padding: 2rem 2.4rem;
+    background: transparent;
+    border-bottom: 3px solid var(--secondary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--secondary-color);
+}

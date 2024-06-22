@@ -1,0 +1,73 @@
+.container{
+    width: 100%;
+    position: relative;
+}
+.hidden{
+    position: absolute;
+    z-index: -1;
+    display: none;
+}
+.display{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1.6rem;
+    background: rgba($color: #3390EE, $alpha: .21);
+    border-radius: .6rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-black);
+    letter-spacing: 1px;
+
+    &.isOpen{
+        svg{
+            transform: rotate(-180deg);
+            transition: transform .3s linear;
+        }
+    }
+    &.isClosed{
+        svg{
+            transform: rotate(0);
+            transition: transform .3s linear;
+        }
+    }
+}
+.option_container{
+    width: 100%;
+    background: #3390EE;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    transform: translateY(100%) scaleY(0);
+    transform-origin: top;
+    display: flex;
+    flex-direction: column;
+    transition: transfrom .3s linear;
+
+    &.isOpen{
+        transform: translateY(100%) scaleY(1);
+    }
+}
+.option{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-white);
+}
+.value,
+.placeholder{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-right: auto;
+    font-weight: 700;
+}
+.value{
+    color: var(--text-black)
+}
+.placeholder{
+    color: rgba($color: #000912, $alpha: 0.4);
+}
